@@ -12,7 +12,7 @@ class faaApi extends APIBaseClass{
 	public function airport_status($airportCode,$format='json'){
 	// airport code is three letters
 	// more info at http://services.faa.gov/docs/services/airport/
-		return ( self::_request($path."/airport/status/$airportCode", 'get', array('format'=>"application/$format"), "Accept: application/$format"));
+		return ( self::_request(self::$api_url."/airport/status/$airportCode", 'get', array('format'=>"application/$format"), "Accept: application/$format"));
 	}
 	
 }
