@@ -20,6 +20,8 @@ require 'APIBaseClass.php';
 require 'faaApi.php';
 
 $new = new faaApi();
+$new->airport_status('IAD');
+$new->airport_status('xml');
 
 // Debug information
 die(print_r($new).print_r(get_object_vars($new)).print_r(get_class_methods(get_class($new))));
